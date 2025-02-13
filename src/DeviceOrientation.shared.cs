@@ -10,6 +10,9 @@ public static class DeviceOrientation
 	public static IDeviceOrientation Default =>
 		defaultImplementation ??= new DeviceOrientationImplementation();
 
-	internal static void SetDefault(IDeviceOrientation? implementation) =>
+	/// <summary>
+	/// Set the Default Orientation
+	/// </summary>
+	public static void SetDefault(IDeviceOrientation? implementation) =>
 		defaultImplementation = implementation;
 }
